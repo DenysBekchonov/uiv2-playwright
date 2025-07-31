@@ -1,0 +1,35 @@
+{
+    "name": "codeceptjs-tests",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "codeceptjs": "codeceptjs run --steps",
+        "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
+        "codeceptjs:ui": "codecept-ui --app",
+        "codeceptjs:demo": "codeceptjs run --steps -c node_modules/@codeceptjs/examples",
+        "codeceptjs:demo:headless": "HEADLESS=true codeceptjs run --steps -c node_modules/@codeceptjs/examples",
+        "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples",
+        "allure:generate": "npx allure generate ./test-reports/allure",
+        "allure:open": "npx allure open ./allure-reports",
+        "allure:serve": "npx allure serve ./test-reports/allure"
+    },
+    "devDependencies": {
+        "@codeceptjs/configure": "^1.0.6",
+        "@codeceptjs/examples": "^1.2.4",
+        "@codeceptjs/ui": "^1.2.5",
+        "@faker-js/faker": "^9.9.0",
+        "@types/node": "^24.1.0",
+        "add": "^2.0.6",
+        "allure-codeceptjs": "^3.3.2",
+        "codeceptjs": "^3.7.3",
+        "playwright": "^1.54.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.3",
+        "yarn": "^1.22.22"
+    },
+    "dependencies": {
+        "form-data": "^4.0.4",
+        "mocha-junit-reporter": "^2.2.1",
+        "mocha-multi": "^1.1.7"
+    }
+}
