@@ -3,7 +3,7 @@
 #  This template allows you to validate your NodeJS code.
 #  The workflow allows running tests and code linting on the default branch.
 
-image: mcr.microsoft.com/playwright:v1.21.1-focal
+image: mcr.microsoft.com/playwright:v1.43.1-jammy
 
 pipelines:
   default:
