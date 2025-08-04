@@ -18,6 +18,8 @@ pipelines:
             - npm install && npx playwright install
             - npx codeceptjs run --reporter=mocha-multi
           after-script:
-            - npm run allure:generate
+            - allure serve allure-results
           artifacts:
-            - allure-report/**
+            - allure-reports/**
+            - test-reports/**
+            - test-reports/result.xml
