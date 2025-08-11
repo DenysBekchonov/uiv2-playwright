@@ -3,6 +3,7 @@ import userDataFactory from '../dataFactory/userData';
 Feature('login');
 
 Scenario('SC001 User logins to the system', async ({ I, mainPage, headerFragment, loginPage }) => {
+    
     const userData = new userDataFactory();
 
     await I.createUser(userData);

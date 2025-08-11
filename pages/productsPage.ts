@@ -1,5 +1,7 @@
 import LocatorOrString = CodeceptJS.LocatorOrString;
 import Page from './pages';
+import productDataFactory from '../dataFactory/productData';
+import cartPage from '../pages/cartPage';
 
 
 const { I, mainPage } = inject();
@@ -12,7 +14,6 @@ class productsPage extends Page {
 
   constructor() {
     super('/products');
-
   }
 
   open(): productsPage {
@@ -20,7 +21,7 @@ class productsPage extends Page {
     return this;
   }
 
-  addProductToCart(category): void {
+  addProductToCart(category): productsPage {
     I.seeElement(mainPage.productsBox);
     I.seeElement(mainPage.productsLeftSidebar);
     if (category === 'men') {
@@ -61,9 +62,13 @@ class productsPage extends Page {
 
     } else {
     console.log('Wrong category: ' + category);
-    I.seeElement('div.wrong-category');
+    I.seeElement(locate('div.wrong-category').as('Wrong category message'));
     }
+
+    return this;
+  
   }
+  
 }
 
 export = new productsPage;

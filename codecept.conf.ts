@@ -54,6 +54,8 @@ export const config: CodeceptJS.MainConfig = {
     loginPage: "./pages/loginPage.ts",
     apiHelper: './helpers/apiHelper.ts',
     productsPage: "./pages/productsPage.ts",
+    productDataFactory: "./dataFactory/productData.ts",
+    cartPage: "./pages/cartPage.ts"
   },
   mocha: {
     reporterOptions: {

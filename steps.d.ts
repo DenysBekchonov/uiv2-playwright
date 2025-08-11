@@ -6,10 +6,12 @@ type dataFactoryPage = typeof import('./dataFactory/userData');
 type loginPage = typeof import('./pages/loginPage');
 type apiHelper = typeof import('./helpers/apiHelper');
 type productsPage = typeof import('./pages/productsPage');
+type productDataFactory = typeof import('./dataFactory/productData');
+type cartPage = typeof import('./pages/cartPage');
 type APIHelper = import('./helpers/apiHelper');
 
 declare namespace CodeceptJS {
-  interface SupportObject { I: I, current: any, mainPage: mainPage, headerFragment: headerFragment, dataFactoryPage: dataFactoryPage, loginPage: loginPage, apiHelper: apiHelper, productsPage: productsPage }
+  interface SupportObject { I: I, current: any, mainPage: mainPage, headerFragment: headerFragment, dataFactoryPage: dataFactoryPage, loginPage: loginPage, apiHelper: apiHelper, productsPage: productsPage, productDataFactory: productDataFactory, cartPage: cartPage }
   interface Methods extends Playwright, REST, APIHelper {}
   interface I extends ReturnType<steps_file>, WithTranslation<Methods> {}
   namespace Translation {
